@@ -1,0 +1,845 @@
+/* =====================================================
+   JHUNKI BIRTHDAY WEBSITE - COMPLETE CSS
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   1. FIRST PAGE
+   ===================================================== */
+
+.center-page {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #ff9a9e,
+        #fad0c4,
+        #fbc2eb
+    );
+
+    overflow: hidden;
+}
+
+
+/* First Card */
+
+.card {
+    width: 90%;
+    max-width: 520px;
+
+    padding: 45px 30px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+    animation: cardAppear 1s ease;
+}
+
+
+.card h1 {
+    color: #e91e63;
+
+    font-size: 38px;
+
+    margin-bottom: 20px;
+}
+
+
+.card p {
+    color: #555;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   BUTTON
+   ===================================================== */
+
+button {
+    border: none;
+    outline: none;
+
+    padding: 15px 30px;
+
+    border-radius: 40px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    color: white;
+
+    background: #e91e63;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(233, 30, 99, 0.35);
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 12px 30px rgba(233, 30, 99, 0.5);
+}
+
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* =====================================================
+   CARD ANIMATION
+   ===================================================== */
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   2. HAPPY BIRTHDAY PAGE
+   ===================================================== */
+
+.birthday-page {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff1f8,
+            #ffc1dc 45%,
+            #ff7eb3
+        );
+}
+
+
+/* Birthday Card */
+
+.birthday-card {
+
+    width: 90%;
+    max-width: 600px;
+
+    padding: 45px 30px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+    z-index: 5;
+
+    animation: birthdayCard 1s ease;
+}
+
+
+.birthday-card h1 {
+
+    font-size: 45px;
+
+    color: #e91e63;
+
+    margin: 20px 0;
+
+}
+
+
+.birthday-card p {
+
+    font-size: 19px;
+
+    color: #555;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* Cake */
+
+.cake {
+
+    font-size: 75px;
+
+    animation:
+        cakeBounce 1s infinite alternate;
+
+}
+
+
+@keyframes cakeBounce {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+/* =====================================================
+   3. BIRTHDAY PAGE BALLOONS
+   ===================================================== */
+
+.balloon {
+
+    position: absolute;
+
+    font-size: 65px;
+
+    z-index: 1;
+
+    animation:
+        balloonFloat 3s ease-in-out infinite;
+
+}
+
+
+.b1 {
+    left: 5%;
+    top: 15%;
+}
+
+
+.b2 {
+    right: 5%;
+    top: 20%;
+}
+
+
+.b3 {
+    left: 12%;
+    bottom: 10%;
+}
+
+
+.b4 {
+    right: 12%;
+    bottom: 8%;
+}
+
+
+@keyframes balloonFloat {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50% {
+        transform:
+            translateY(-25px)
+            rotate(5deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+}
+
+
+/* =====================================================
+   4. COUNTDOWN PAGE
+   ===================================================== */
+
+.countdown-page {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle,
+            #42004d,
+            #16001f,
+            #000
+        );
+
+    overflow: hidden;
+
+}
+
+
+#countdown {
+
+    font-size: 150px;
+
+    font-weight: bold;
+
+    color: #ff69b4;
+
+    text-shadow:
+        0 0 10px #ff69b4,
+        0 0 30px #ff69b4,
+        0 0 60px #ff1493;
+
+    animation:
+        countdownPulse 0.7s infinite alternate;
+
+}
+
+
+.countdown-page p {
+
+    font-size: 24px;
+
+    margin-top: 20px;
+
+}
+
+
+@keyframes countdownPulse {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+
+}
+
+
+/* =====================================================
+   5. PHOTO PAGE
+   ===================================================== */
+
+.photo-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd1e8,
+            #d9c2ff,
+            #bdefff
+        );
+
+}
+
+
+/* =====================================================
+   PHOTO TITLE
+   ===================================================== */
+
+.photo-page h1 {
+
+    display: block;
+
+    font-size: 32px;
+
+    color: #e91e63;
+
+    margin-bottom: 20px;
+
+    z-index: 5;
+
+}
+
+
+.sparkles {
+
+    display: block;
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* =====================================================
+   PHOTO CONTAINER
+   ===================================================== */
+
+.photo-box {
+
+    position: relative;
+
+    width: 90%;
+
+    max-width: 600px;
+
+    height: 70vh;
+
+    min-height: 400px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: white;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3);
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =====================================================
+   IMPORTANT:
+   SHOW COMPLETE PHOTO
+   WITHOUT CROPPING
+   ===================================================== */
+
+.photo-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background: #000;
+
+}
+
+
+/*
+    object-fit: contain means:
+
+    ✅ Complete photo visible
+    ✅ No head/body gets cut
+    ✅ No side portion gets cropped
+    ✅ Original photo ratio preserved
+
+    There can be empty space around the photo.
+*/
+
+
+
+
+/* =====================================================
+   TEXT BELOW PHOTO
+   ===================================================== */
+
+.photo-page > p {
+
+    display: block;
+
+    color: #6b286d;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-top: 15px;
+
+}
+
+
+/* =====================================================
+   6. PHOTO BLINK
+   ===================================================== */
+
+.blink {
+
+    animation:
+        photoBlink 1s ease;
+
+}
+
+
+@keyframes photoBlink {
+
+    0% {
+        opacity: 1;
+    }
+
+    15% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+/* =====================================================
+   7. FULL SCREEN BALLOON BLAST
+   ===================================================== */
+
+.balloon-blast {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 99999;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    animation:
+        blastFlash 0.4s ease-out;
+
+}
+
+
+/* =====================================================
+   BLAST BALLOONS
+   ===================================================== */
+
+.blast-balloon {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    font-size:
+        clamp(
+            45px,
+            8vw,
+            100px
+        );
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.1);
+
+    animation:
+        balloonBlast
+        2s
+        cubic-bezier(.15, .8, .25, 1)
+        var(--delay)
+        forwards;
+
+    filter:
+        drop-shadow(
+            0 8px 10px
+            rgba(0, 0, 0, 0.25)
+        );
+
+}
+
+
+/* =====================================================
+   BALLOON EXPLOSION
+   ===================================================== */
+
+@keyframes balloonBlast {
+
+    0% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.1)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+
+    15% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.4)
+            rotate(10deg);
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        transform:
+            translate(
+                calc(-50% + var(--dx)),
+                calc(-50% + var(--dy))
+            )
+            scale(1)
+            rotate(40deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   BLAST FLASH
+   ===================================================== */
+
+@keyframes blastFlash {
+
+    0% {
+
+        background:
+            rgba(255, 255, 255, 0.9);
+
+    }
+
+    30% {
+
+        background:
+            rgba(255, 255, 255, 0.45);
+
+    }
+
+    100% {
+
+        background:
+            rgba(255, 255, 255, 0);
+
+    }
+
+}
+
+
+/* =====================================================
+   8. MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .card h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .birthday-card {
+
+        padding: 35px 20px;
+
+    }
+
+
+    .birthday-card h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .birthday-card p {
+
+        font-size: 16px;
+
+    }
+
+
+    .cake {
+
+        font-size: 60px;
+
+    }
+
+
+    #countdown {
+
+        font-size: 110px;
+
+    }
+
+
+    .photo-page {
+
+        padding: 10px;
+
+    }
+
+
+    .photo-page h1 {
+
+        font-size: 26px;
+
+        margin-bottom: 10px;
+
+    }
+
+
+    .photo-box {
+
+        width: 96%;
+
+        height: 70vh;
+
+        min-height: 300px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .tap {
+
+        font-size: 17px;
+
+        padding: 14px 24px;
+
+    }
+
+}
+
+
+/* =====================================================
+   9. SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .photo-box {
+
+        height: 65vh;
+
+    }
+
+tap {
+
+        font-size: 10px;
+
+        padding: 20px 20px;
+
+    }
+    
+
+
+    #countdown {
+
+        font-size: 90px;
+
+    }
+
+}
